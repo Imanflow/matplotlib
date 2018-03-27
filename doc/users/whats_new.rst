@@ -409,10 +409,19 @@ Improved `repr` for `Transform`\s
                               [   0.  100.    0.]
                               [   0.    0.    1.]])))))))
 
+Improved `repr` for `Transform`\s
+---------------------------------
+Something like::
+  import logging
+  mlog = logging.getLogger('matplotlib')
 
-
-
-
+Circular pie charts by default
+------------------------------
+We acknowledge that the majority of people do not like egg-shaped pies.
+Therefore, an axes to which a `pie` chart is plotted will be set to have equal
+aspect ratio by default. This ensures that the pie appears circular independent
+on the axes size or units. To revert to the previous behaviour you may set
+the axes' aspect to automatic, `ax.set_aspect("auto")` or `plt.axis("auto")`.
 
 
 Previous Whats New

@@ -2789,6 +2789,7 @@ class Axes(_AxesBase):
                            1.25 + center[1]))
             self.set_xticks([])
             self.set_yticks([])
+            self.set_aspect("equal")
 
         if autopct is None:
             return slices, texts
